@@ -1,0 +1,20 @@
+name: mirror
+
+on:
+  schedule:
+    - cron: "12 */2 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+      - name: Fetch data
+        run: |
+          sh ./mirror-gitlab.sh
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          API_TOKEN_GITLAB: ${{ secrets.API_TOKEN_GITLAB }}
