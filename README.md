@@ -8,8 +8,8 @@ Fork 本專案之後，進行如下設置
 settings -> secrets 添加以下參數
 
 - API_TOKEN_GITHUB: Github Personal Access Token需要有repo讀寫權限
-- API_TOKEN_GITHUB: Github Personal Access Token需要有repo讀寫權限
-- USERNAME_GITLAB: Gitlab 用戶名
+- API_TOKEN_GITLAB: Gitlab Personal Access Token需要有repo讀寫權限
+- USERNAME_GITLAB: 你的Gitlab 用戶名
 
 ### 設置項目
 在gitlab創建相應的`<mirror_repo>`項目，將`./mirror-gitlab.sh`中的項目名稱替換爲您需要鏡像的項目, 當有多個專案時`folder`應使用不同命名。
