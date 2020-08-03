@@ -14,7 +14,8 @@ jobs:
           lfs: true
       - name: Fetch data
         run: |
-          sh ./mirror-gitlab.sh
+          chmod +x ./mirror-gitlab.sh
+          ./mirror-gitlab.sh
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           API_TOKEN_GITLAB: ${{ secrets.API_TOKEN_GITLAB }}
